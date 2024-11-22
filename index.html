@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Clics Multijugador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Juego de Clics Multijugador!</h1>
+        <div id="score">Puntaje: 0</div>
+        <div id="name-input">
+            <input type="text" id="player-name" placeholder="Ingresa tu nombre" />
+            <button onclick="enviarNombre()">Unirme al juego</button>
+        </div>
+        <div id="game-container">
+            <button id="click-button" onclick="enviarClick()" disabled>
+                <span>¡Haz clic!</span>
+            </button>
+            <div id="log"></div>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
