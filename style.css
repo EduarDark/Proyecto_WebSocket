@@ -1,3 +1,4 @@
+/* Fondo general */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -8,7 +9,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1s ease-out;
 }
+
+/* Contenedor principal */
 .container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -16,4 +20,163 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 90%;
+    animation: slideIn 1s ease-out;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease-out;
+}
+
+/* Puntaje */
+#score {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Input de nombre */
+#name-input {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+#player-name {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #f1faee;
+    border-radius: 5px;
+    background: #a8dadc;
+    color: #1d3557;
+}
+
+#name-input button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#name-input button:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}
+
+/* Botón de clic */
+#click-button {
+    background: #06d6a0;
+    color: #1d3557;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+#click-button:hover {
+    background: #04c78c;
+    transform: scale(1.05);
+}
+
+/* Animación del botón al hacer clic */
+#click-button:active {
+    animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.5);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 30px rgba(6, 214, 160, 0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de slide in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de bounce in */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación de fade in up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Log de mensajes */
+#log {
+    margin-top: 20px;
+    height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    color: #f1faee;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    animation: fadeIn 1.5s ease-out;
+}
+/* Animación de fade-in para los mensajes del log */
+@keyframes fadeInLog {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInLog {
+    animation: fadeInLog 0.5s ease-out;
 }
